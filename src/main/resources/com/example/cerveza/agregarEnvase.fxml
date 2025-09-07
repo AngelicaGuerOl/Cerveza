@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="542.0" prefWidth="656.0" spacing="20.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cerveza.ControladorVista.CtrlAgregarMarca">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Agregar envase">
+        <font>
+            <Font name="Cambria" size="24.0" />
+        </font>
+      <padding>
+         <Insets right="240.0" />
+      </padding>
+    </Label>
+    <GridPane fx:id="pnl_contenedor" alignment="CENTER" hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="100" />
+            <ColumnConstraints hgrow="NEVER" minWidth="300" />
+        </columnConstraints>
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txt_nombreEnvase" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Material:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txt_materialEnvase" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Capacidad:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <children>
+                <Spinner fx:id="sp_cantEn" prefHeight="25.0" prefWidth="121.0" />
+                <Label text="Unidad:">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin></Label>
+                <ComboBox fx:id="cmb_uni" prefHeight="25.0" prefWidth="111.0" />
+            </children>
+        </HBox>
+        <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="txt_desc" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button fx:id="btn_guardarEnvase" text="Guardar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Button>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+</VBox>

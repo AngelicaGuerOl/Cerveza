@@ -1,0 +1,4 @@
+.text-field {
+    -fx-pref-width: 350px;
+    -fx-max-width: 350px;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="542.0" prefWidth="656.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cerveza.ControladorVista.CtrlMenu">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <BorderPane prefHeight="539.0" prefWidth="616.0">
+         <left>
+            <VBox prefHeight="502.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btn_envase" mnemonicParsing="false" prefHeight="46.0" prefWidth="230.0" text="Envase" />
+                  <Button fx:id="btn_produccion" mnemonicParsing="false" prefHeight="47.0" prefWidth="216.0" text="Producción" />
+                  <Button fx:id="btn_marca" mnemonicParsing="false" prefHeight="54.0" prefWidth="219.0" text="Marca" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
