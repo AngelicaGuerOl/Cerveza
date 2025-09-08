@@ -18,6 +18,7 @@ public class CtrlvMarca {
     public void initialize() {
         btn_nvaMarca.setOnAction(e -> cargarPanel("agregarMarca.fxml"));
         cargarPanel("agregarMarca.fxml");
+        btn_admMarca.setOnAction(e -> cargarPanel("administrarMarca.fxml"));
 
     }
 

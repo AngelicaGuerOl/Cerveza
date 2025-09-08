@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="542.0" prefWidth="656.0" spacing="20.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cerveza.ControladorVista.CtrlAdministrarMarca">
+   <Label prefHeight="22.0" prefWidth="211.0" text="Administrar marca">
+      <font>
+         <Font name="Serif Bold" size="24.0" />
+      </font>
+   </Label>
+   <TableView fx:id="tb_marca" prefHeight="200.0" prefWidth="400.0" VBox.vgrow="NEVER">
+     <columns>
+       <TableColumn fx:id="col_id" prefWidth="50.0" text="N°" />
+       <TableColumn fx:id="col_fab" prefWidth="160.0" text="Fabricante" />
+         <TableColumn fx:id="col_nom" prefWidth="160.0" text="Nombre" />
+         <TableColumn fx:id="col_desc" minWidth="160.0" prefWidth="75.0" text="Descripción" />
+     </columns>
+   </TableView>
+    <GridPane fx:id="pnl_contenedor" alignment="CENTER" hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" maxWidth="95.0" minWidth="62.0" prefWidth="62.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="138.0" minWidth="70.0" prefWidth="72.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="418.0" minWidth="300.0" prefWidth="416.0" />
+        </columnConstraints>
+        <Label text="Fabricante:" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Nombre:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="txt_nombreMarca" prefWidth="160" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Descripción:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="txt_descMarca" prefWidth="160" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+        <ComboBox fx:id="cmb_fab" prefWidth="350.0" GridPane.columnIndex="2" />
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+   <HBox alignment="CENTER">
+      <children>
+         <Button fx:id="btn_modificar" mnemonicParsing="false" onAction="#actualizarMarca" text="Modificar">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="btn_eliminar" mnemonicParsing="false" onAction="#eliminarMarca" text="Eliminar" />
+      </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </HBox>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+</VBox>
